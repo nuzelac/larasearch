@@ -120,7 +120,7 @@ class Proxy {
 	public function reindex($relations = false, $batchSize = 750, $mapping = [], Callable $callback = null)
 	{
 		$model = $this->config['model'];
-		$name = $this->config['index']->getName();
+		$name = $this->config['index']->getUnprefixedName();
 
 		$newName = $name . '_' . date("YmdHis");
 		$relations = $relations ? Config::get('larasearch::paths.' . get_class($model)) : [];
