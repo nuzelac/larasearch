@@ -127,6 +127,14 @@ class Index {
 		}
 	}
 
+	public function getUnprefixedName()
+	{
+		if ( ! is_null($this->name))
+		{
+			return strtolower($this->name);
+		}
+	}
+
 	/**
 	 * Create a new index
 	 *
